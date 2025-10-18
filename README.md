@@ -19,7 +19,8 @@ Spring Bootを使用して作成した社員情報管理システムです。<br
 | ビルドツール | Maven |  
 
 ---
-##機能一覧
+## 機能一覧  
+
 ✅ 社員情報の登録（名前・部署・入社日）  
 ✅ 社員情報の編集・削除  
 ✅ 名前による部分一致検索  
@@ -29,7 +30,7 @@ Spring Bootを使用して作成した社員情報管理システムです。<br
 ✅ Bootstrapによるデザイン  
 
 ---
-##機能詳細  
+## 機能詳細  
 | 機能 | 説明 |  
 |------|------|  
 | 一覧表示 | 社員情報をテーブルで一覧表示 |  
@@ -43,7 +44,7 @@ Spring Bootを使用して作成した社員情報管理システムです。<br
 
 ---
 
-##画面イメージ
+## 画面イメージ
 
 | 一覧画面 | 登録画面 |
 |-----------|-----------|
@@ -51,7 +52,7 @@ Spring Bootを使用して作成した社員情報管理システムです。<br
 
 ---
 
-##起動方法
+## 起動方法
 
 ### 前提
 - JDK 17 がインストール済み
@@ -59,43 +60,45 @@ Spring Bootを使用して作成した社員情報管理システムです。<br
 
 ### 実行手順
 
-####プロジェクトルートで
+#### プロジェクトルートで
 mvn spring-boot:run
-####ブラウザで以下にアクセス
+#### ブラウザで以下にアクセス
 http://localhost:8080/employees
 
 ---
-##学んだこと
+## 学んだこと  
 ・Spring BootのMVC構成  
 ・Entity,Repository,Controller,Viewの役割分担  
-・バージョンエラーや依存関係  
+・バージョンエラーや依存関係 
+
 ---
-##工夫点
+## 工夫点
 ・バリデーションの仕組み（@NotNull,@PastOrPresentなど）  
 ・メッセージの外部化による保守性向上  
 ・BootstrapによるUIデザイン改善  
 
 ---
-##ディレクトリ構成
+## ディレクトリ構成
+```
 employee-management/  
  ├─ src/  
- │   ├─ main/  
- │   │   ├─ java/com/example/demo/  
- │   │   │    ├─ controller/      # コントローラ層  
- │   │   │    ├─ entity/          # エンティティ（モデル）  
- │   │   │    ├─ repository/      # データアクセス層  
- │   │   │    └─ EmployeeManagementApplication.java  
- │   │   └─ resources/  
- │   │        ├─ templates/        # Thymeleafテンプレート  
- │   │        ├─ static/           # CSS / JS  
- │   │        ├─ messages.properties  
- │   │        └─ application.properties  
+ │   └─ main/  
+ │      ├─ java/com/example/demo/  
+ │      │    ├─ controller/　　      # コントローラ層  
+ │      │    ├─ entity/         　　 # エンティティ（モデル）  
+ │      │    ├─ repository/     　　 # データアクセス層  
+ │      │    └─ EmployeeManagementApplication.java  
+ │      └─ resources/  
+ │           ├─ templates/      　   # Thymeleafテンプレート  
+ │           ├─ static/         　   # CSS / JS  
+ │           ├─ messages.properties  
+ │           └─ application.properties  
  ├─ pom.xml  
  ├─ README.md  
  └─ screenshots/
- 
+```
  ---
-##制作者コメント
+## 制作者コメント
 未経験からエンジニアを目指し、その第一歩として作成しました。  
 フォームの入力値保持やバリデーションメッセージ外部化にこだわりました。  
 現場で通用する基礎スキルの習得を目的としています。  
@@ -103,7 +106,7 @@ employee-management/
 別のアプリケーションを制作したりして更なるスキルの向上を目指します。  
 
 ---
-##ライセンス
+## ライセンス
 このプロジェクトは個人学習目的で制作されています。
 
 
