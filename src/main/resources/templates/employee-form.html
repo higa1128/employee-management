@@ -9,32 +9,30 @@
 </head>
 
 <body>
-	<div calass="container mt-4">
+	<div class="container mt-4">
 		<h2>社員登録フォーム</h2>
 		<form th:action="@{${employee.id} != null ? '/employees/' + ${employee.id} : '/employees'}"
 			th:object="${employee}" method="post" class="needs-validation">
 			<div class="md-3">
-				<label calss="form-label">名前</label>
+				<label class="form-label">名前</label>
 				<input type="text" th:field="*{name}" class="form-control"/><br>
 				<div th:if="${#fields.hasErrors('name')}" th:errors="*{name}" class="text-danger">
 				</div>
 			</div>
 
-			<div calass="mb-3">
-				<label calss="form-label">部署</label>
+			<div class="mb-3">
+				<label class="form-label">部署</label>
 				<input type="text" th:field="*{department}" class="form-control"/><br>
 				<div th:if="${#fields.hasErrors('department')}" th:errors="*{department}" class="text-danger"></div>
 			</div>
 			<div class="mb-3">
-				<label calss="form-label">入社日</label>
+				<label class="form-label">入社日</label>
 				<input type="date" th:field="*{hireDate}" class="form-control"/><br>
 				<div th:if="${#fields.hasErrors('hireDate')}" th:errors="*{hireDate}" class="text-danger"></div>
 			</div>
-			<button type="submit" class="btn btn-success">登録</button>
+			<button type="submit" class="btn btn-success">登録</button><br>
+			<a th:href="@{/employees}" class="btn btn-secondary">一覧に戻る</a>
 		</form>
-	</div>
-
-	<a th:href="@{/employees}" class="btn btn-secondary">一覧に戻る</a>
+	</div>	
 </body>
-
 </html>
